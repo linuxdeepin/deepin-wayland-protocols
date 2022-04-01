@@ -5,8 +5,11 @@
 install(FILES
     protocols/appmenu.xml
     protocols/blur.xml
+    protocols/client-management.xml
     protocols/contrast.xml
     protocols/dpms.xml
+    protocols/dde-seat.xml
+    protocols/dde-shell.xml
     protocols/fake-input.xml
     protocols/fullscreen-shell.xml
     protocols/idle.xml
@@ -25,6 +28,7 @@ install(FILES
     protocols/server-decoration.xml
     protocols/shadow.xml
     protocols/slide.xml
+    protocols/strut.xml
     protocols/surface-extension.xml
     protocols/text-input-unstable-v2.xml
     protocols/text-input.xml
