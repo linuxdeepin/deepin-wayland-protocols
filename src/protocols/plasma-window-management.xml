@@ -380,6 +380,13 @@
       </description>
       <arg name="resource_name" type="string" summary="resource name"/>
     </event>
+
+    <event name="window_id">
+      <description summary="notify the client accept window id">
+        This event will be sent immediately after a window is mapped.
+      </description>
+      <arg name="winid" type="uint" summary="window Id"/>
+    </event>
   </interface>
 
   <interface name="org_kde_plasma_activation_feedback" version="1">
