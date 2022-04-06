@@ -196,6 +196,14 @@
     <description summary="Select which primary output to use" />
     <arg name="output" type="object" interface="kde_output_device_v2" allow-null="false"/>
   </request>
+
+  <request name="brightness">
+    <description summary="switch outputdevice brightness">
+      Sets the just a test.
+    </description>
+    <arg name="outputdevice" type="object" interface="kde_output_device_v2" summary="outputdevice this brightness change applies to"/>
+    <arg name="brightness" type="int" summary="aspired brightness's number"/>
+  </request>
 </interface>
 
 </protocol>
