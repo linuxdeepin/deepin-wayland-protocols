@@ -181,6 +181,9 @@
       <entry name="tooltip" value="5"/>
       <entry name="criticalnotification" value="6" since="6"/>
       <entry name="appletpopup" value="7" since="8"/>
+      <entry name="StandAlone" value="8"/>
+      <entry name="override" value="9"/>
+      <entry name="activeFullScreen" value="10"/>
 <!--
       <entry name="splash" value="1"/>
       <entry name="dashboard" value="3"/>
