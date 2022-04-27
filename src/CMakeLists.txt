@@ -30,4 +30,4 @@ install(FILES
     protocols/text-input.xml
     protocols/wayland-eglstream-controller.xml
 
-    DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
+    DESTINATION ${KDE_INSTALL_DATADIR}/deepin-wayland-protocols)
