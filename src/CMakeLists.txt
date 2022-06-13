@@ -29,5 +29,6 @@ install(FILES
     protocols/text-input-unstable-v2.xml
     protocols/text-input.xml
     protocols/wayland-eglstream-controller.xml
+    protocols/dde-globalproperty.xml
 
     DESTINATION ${KDE_INSTALL_DATADIR}/deepin-wayland-protocols)
