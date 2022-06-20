@@ -1,3 +1,10 @@
+deepin-wayland-protocols (1.6.0-deepin.1.0) unstable; urgency=medium
+
+  * New upstream release (1.6.0-deepin.1.0).
+  * Init deepin wayland protocols
+
+ -- jccKevin <luochaojiang@uniontech.com>  Mon, 20 Jun 2022 19:33:15 +0800
+
 deepin-wayland-protocols (1.6.0-1) unstable; urgency=medium
 
   * New upstream release (1.6.0).
