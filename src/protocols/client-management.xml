@@ -46,6 +46,22 @@
         <arg name="states" type="array" summary="windows information"/>
     </event>
 
+    <event name="split_change">
+        <description summary="send splitable change event">
+        send splitable change event
+        </description>
+        <arg name="uuid" type="string" summary="internal window uuid"/>
+        <arg name="splitable" type="uint" summary="splitable"/>
+    </event>
+
+    <request name="split_window">
+        <description summary="request window split">
+            request window split.
+        </description>
+        <arg name="uuid" type="string" summary="internal window uuid"/>
+        <arg name="split_type" type="int" summary="split type"/>
+    </request>
+
     <request name="capture_window_image">
         <description summary="request get the window state of all clients">
             request window state of all clients, will notify by "windows_state" event.
