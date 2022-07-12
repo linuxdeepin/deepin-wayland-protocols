@@ -63,5 +63,21 @@
         <arg name="buffer" type="object" interface="wl_buffer" allow-null="true" summary="buffer of capture contents"/>
     </event>
 
+    <request name="split_window">
+        <description summary="request window split">
+            request window split.
+        </description>
+        <arg name="uuid" type="string" summary="internal window uuid"/>
+        <arg name="split_type" type="int" summary="split type"/>
+    </request>
+
+    <event name="split_change">
+        <description summary="send splitable change event">
+        send splitable change event
+        </description>
+        <arg name="uuid" type="string" summary="internal window uuid"/>
+        <arg name="splitable" type="uint" summary="splitable"/>
+    </event>
+
 </interface>
 </protocol>
