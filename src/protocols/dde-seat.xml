@@ -71,8 +71,8 @@
 
     <request name="get_motion">
       <description summary="get a global cursor position">
+        client request server to send a global cursor position
       </description>
-      client request server to send a global cursor position
     </request>
 
     <event name="motion">
