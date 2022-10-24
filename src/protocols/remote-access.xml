@@ -5,7 +5,7 @@
 
     SPDX-License-Identifier: LGPL-2.1-or-later
   ]]></copyright>
-    <interface name="org_kde_kwin_remote_access_manager" version="1">
+    <interface name="org_kde_kwin_remote_access_manager" version="2">
         <description summary="Protocol for managing rendered GBM buffers passing"/>
         <event name="buffer_ready" since="1">
             <description summary="Signals about buffer ready to be consumed by clients"/>
@@ -20,6 +20,16 @@
         <request name="release" type="destructor">
             <description summary="release org_kde_kwin_remote_access_manager interface"/>
         </request>
+        <request name="record" since="2">
+            <description summary="start retrieving buffer from server"/>
+            <arg name="frame" type="int" summary="screen shot count, 0 for stop, -1 for recording"/>
+        </request>
+        <request name="get_rendersequence">
+            <description summary="get server rendered sequence"/>
+        </request>
+        <event name="rendersequence">
+            <arg name="number" type="int" summary="Server is ready for serial number signal"/>
+        </event>
     </interface>
     <interface name="org_kde_kwin_remote_buffer" version="1">
         <description summary="This interface allows finer control of remote buffer lifecycle"/>
