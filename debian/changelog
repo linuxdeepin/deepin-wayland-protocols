@@ -1,3 +1,10 @@
+deepin-wayland-protocols (1.6.0-deepin.1.2) unstable; urgency=medium
+
+  * Bug fix.
+    + 146607 feat: remote-access.xml using v20
+
+ -- Lei Su <sulei@uniontech.com>  Tue, 15 Nov 2022 10:21:01 +0800
+
 deepin-wayland-protocols (1.6.0-deepin.1.1) unstable; urgency=medium
 
   * splitscreen package 8
