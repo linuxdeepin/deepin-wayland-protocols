@@ -1,0 +1,28 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: deepin-wayland-protocols
+Upstream-Contact:  <>
+Source: 
+
+# Sample paragraph, commented out:
+#
+# Files: src/*
+# Copyright: $YEAR $NAME <$CONTACT>
+# License: ...
+
+Files: .github/*
+Copyright: UnionTech Software Technology Co., Ltd.
+License: LGPL-2.1-or-later
+
+
+Files: debian/* CMakeLists.txt DeepinWaylandProtocolsConfig.cmake.in
+Copyright: UnionTech Software Technology Co., Ltd.
+License: LGPL-2.1-or-later
+
+Files: src/*
+Copyright: UnionTech Software Technology Co., Ltd.
+License: LGPL-2.1-or-later
+
+Files: .gitignore .kde-ci.yml README.md metainfo.yaml
+Copyright: UnionTech Software Technology Co., Ltd.
+License: LGPL-2.1-or-later
+
