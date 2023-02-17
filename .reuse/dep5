@@ -1,0 +1,35 @@
+Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
+Upstream-Name: deepin-wayland-protocols
+Upstream-Contact:  UnionTech Software Technology Co., Ltd. <>
+Source: https://github.com/linuxdeepin/deepin-wayland-protocols
+
+# ci
+Files: .github/* .gitlab-ci.yml
+Copyright: None
+License: CC0-1.0
+
+# Packaging configuration
+Files: rpm/* debian/* archlinux/*
+Copyright: None
+License: CC0-1.0
+
+# Project file
+Files: .project .git-blame-ignore-revs .gitignore CMakeLists.txt autotests/CMakeLists.txt autotests/client/CMakeLists.txt autotests/server/CMakeLists.txt
+ src/CMakeLists.txt src/client/CMakeLists.txt src/server/CMakeLists.txt src/tools/.clang-format src/tools/CMakeLists.txt tests/CMakeLists.txt
+Copyright: None
+License: CC0-1.0
+
+# in
+Files: DeepinWaylandProtocolsConfig.cmake.in
+Copyright: None
+License: CC0-1.0
+
+# protocols
+Files: src/protocols/*.xml
+Copyright: None
+License: CC0-1.0
+
+# readme
+Files: README.*
+Copyright: None
+License: CC0-1.0
