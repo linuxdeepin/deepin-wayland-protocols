@@ -5,7 +5,7 @@ Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
 Uploaders: Aurélien COUDERC <coucouf@debian.org>,
            Pino Toscano <pino@debian.org>,
 Build-Depends: cmake (>= 3.5~),
-               debhelper-compat (>= 12),
+               debhelper-compat (= 12),
                extra-cmake-modules (>= 5.69.0~),
                qtbase5-dev,
 Standards-Version: 4.6.2
