@@ -9,6 +9,7 @@ install(FILES
     protocols/contrast.xml
     protocols/dpms.xml
     protocols/dde-seat.xml
+    protocols/dde-security.xml
     protocols/dde-shell.xml
     protocols/fake-input.xml
     protocols/fullscreen-shell.xml
@@ -33,6 +34,7 @@ install(FILES
     protocols/text-input-unstable-v2.xml
     protocols/text-input.xml
     protocols/wayland-eglstream-controller.xml
+    protocols/wlr-data-control-unstable-v1.xml
     protocols/zkde-screencast-unstable-v1.xml
     protocols/kde-output-order-v1.xml
 
