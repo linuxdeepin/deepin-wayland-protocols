@@ -8,6 +8,7 @@ install(FILES
     protocols/client-management.xml
     protocols/contrast.xml
     protocols/dpms.xml
+    protocols/dde-restrict.xml
     protocols/dde-seat.xml
     protocols/dde-security.xml
     protocols/dde-shell.xml
