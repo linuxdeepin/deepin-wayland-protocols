@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.8-deepin8-1) unstable; urgency=medium
+
+  [ jccKevin ]
+  * add split menu interface.
+
+ -- jccKevin <luochaojiang@uniontech.com>  Tue, 05 Sep 2023 23:09:56 +0800
+
 plasma-wayland-protocols (1.10.0.7-deepin7-1) unstable; urgency=medium
 
   [ jccKevin ]
