@@ -1,5 +1,11 @@
 plasma-wayland-protocols (1.10.0.8-deepin8-1) unstable; urgency=medium
 
+  * Sync form upstream 1.10.0
+
+ -- jccKevin <luochaojiang@uniontech.com>  Mon, 11 Sep 2023 11:43:09 +0800
+
+plasma-wayland-protocols (1.10.0.8-deepin8-1) unstable; urgency=medium
+
   [ jccKevin ]
   * add split menu interface.
 
