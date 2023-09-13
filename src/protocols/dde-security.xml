@@ -59,7 +59,7 @@
     <event name="ace_clients">
       <description summary="create a security session">
         The event will be sent after get the ace pids.
-      </description>;
+      </description>
       <arg name="count" type="uint"/>
       <arg name="clients" type="array" summary="ace client pid"/>
     </event>
