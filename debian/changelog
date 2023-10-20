@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.12-deepin12-1) unstable; urgency=medium
+
+  [ huangzeming ]
+  * Fix dtk split menu protocol
+
+ -- huangzeming <huangzeming@uniontech.com>  Fri, 20 Oct 2023 15:29:09 +0800
+
 plasma-wayland-protocols (1.10.0.11-deepin11-1) unstable; urgency=medium
 
   [ jccKevin ]
