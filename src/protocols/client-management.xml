@@ -77,5 +77,43 @@
         <arg name="delay" type="int" summary="whether to delay hiding"/>
     </request>
 
+    <request name="get_all_window_id">
+        <description summary="get all window id">
+            Request window id of all clients, will notify by "all_window_id" event.
+        </description>
+    </request>
+
+    <event name="all_window_id">
+        <description summary="all window id">
+            Window id of all clients.
+        </description>
+        <arg name="id_array" type="array" summary="window id array"/>
+    </event>
+
+    <request name="get_specific_window_state">
+        <description summary="Request state of specific window">
+            Request state of specific window.
+        </description>
+        <arg name="window_id" type="uint" summary="specific window id"/>
+    </request>
+
+    <event name="specific_window_state">
+        <description summary="specific window state">
+            Window infomation such as pid/window_id/property.
+        </description>
+        <arg name="pid" type="int" summary="process id"/>
+        <arg name="window_id" type="uint" summary="window id"/>
+        <arg name="resource_name" type="string" summary="resource name"/>
+        <arg name="x" type="int" summary="window position"/>
+        <arg name="y" type="int" summary="window position"/>
+        <arg name="width" type="int" summary="window size"/>
+        <arg name="height" type="int" summary="window size"/>
+        <arg name="is_minimized" type="int" summary="is minimized"/>
+        <arg name="is_fullscreen" type="int" summary="is fullscreen"/>
+        <arg name="is_active" type="int" summary="is_active"/>
+        <arg name="splitable" type="int" summary="splitable"/>
+        <arg name="uuid" type="string" summary="window uuid"/>
+    </event>
+
 </interface>
 </protocol>
