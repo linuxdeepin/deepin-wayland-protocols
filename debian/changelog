@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.14-deepin14-1) unstable; urgency=medium
+
+  [ Chaojiang Luo ]
+  * feat: Add callback for ctm and brightness
+
+ -- jccKevin <luochaojiang@uniontech.com>  Tue, 19 Dec 2023 19:56:37 +0800
+
 plasma-wayland-protocols (1.10.0.13-deepin13-1) unstable; urgency=medium
 
   [ huangzeming ]
