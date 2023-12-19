@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.13-deepin13-1) unstable; urgency=medium
+
+  [ huangzeming ]
+  * Feat replaced interface GetAllWindowStates with GetAllWindowStatesList
+
+ -- huangzeming <huangzeming@uniontech.com>  Tue, 19 Dec 2023 16:23:02 +0800
+
 plasma-wayland-protocols (1.10.0.12-deepin12-1) unstable; urgency=medium
 
   [ huangzeming ]
