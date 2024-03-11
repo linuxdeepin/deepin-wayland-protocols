@@ -38,6 +38,7 @@ install(FILES
     protocols/wlr-data-control-unstable-v1.xml
     protocols/zkde-screencast-unstable-v1.xml
     protocols/kde-output-order-v1.xml
+    protocols/dde-kvm.xml
 
     DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
 
