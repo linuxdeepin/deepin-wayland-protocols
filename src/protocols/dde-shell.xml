@@ -83,7 +83,7 @@
 
     </interface>
 
-    <interface name="dde_shell_surface" version="1">
+    <interface name="dde_shell_surface" version="2">
 
       <description summary="dde shell surface">
 
@@ -158,6 +158,18 @@
         </description>
         <arg name="split_type" type="uint"/>
       </request>
+
+      <event name="workarea" since="2">
+        <description summary="work area">
+            This event will send work area
+        </description>
+        <arg name="output" type="object" interface="wl_output" summary="output"/>
+        <arg name="x" type="uint" summary="x"/>
+        <arg name="y" type="uint" summary="y"/>
+        <arg name="width" type="uint" summary="width"/>
+        <arg name="height" type="uint" summary="height"/>
+      </event>
+
 
     </interface>
 
