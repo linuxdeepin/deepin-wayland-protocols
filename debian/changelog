@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.15-deepin15-1) unstable; urgency=medium
+
+  [ dingzhixuan ]
+  * fix: add workarea in dde-shell
+
+ -- dingzhixuan <dingzhixuan@uniontech.com>  Thu, 14 Mar 2024 19:24:06 +0800
+
 plasma-wayland-protocols (1.10.0.14-deepin14-1) unstable; urgency=medium
 
   [ Chaojiang Luo ]
