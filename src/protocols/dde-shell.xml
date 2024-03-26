@@ -73,6 +73,23 @@
         <entry name="right_split" value="1 &lt;&lt; 1"/>
       </enum>
 
+      <enum name="effectscene">
+        <entry name="effectNoRadius" value="1 &lt;&lt; 0"/>
+        <entry name="effectNoShadow" value="1 &lt;&lt; 1"/>
+        <entry name="effectNoBorder" value="1 &lt;&lt; 2"/>
+        <entry name="effectNoStart" value="1 &lt;&lt; 4"/>
+        <entry name="effectNoClose" value="1 &lt;&lt; 5"/>
+        <entry name="effectNoMaximize" value="1 &lt;&lt; 6"/>
+        <entry name="effectNoMinimize" value="1 &lt;&lt; 7"/>
+      </enum>
+
+      <enum name="effecttype">
+        <entry name="effectNormal" value="1 &lt;&lt; 0"/>
+        <entry name="effectCursor" value="1 &lt;&lt; 1"/>
+        <entry name="effectTop" value="1 &lt;&lt; 2"/>
+        <entry name="effectBottom" value="1 &lt;&lt; 3"/>
+      </enum>
+
       <request name="get_shell_surface">
         <description summary="get a dde shell surface bind to a wayland surface">
         </description>
@@ -140,7 +157,7 @@
         <arg name="flags" type="uint" summary="splitable value"/>
       </event>
 
-      <request name="set_property">
+      <request name="set_property" since="2">
         <description summary="set window property">
           Set window property.
 
@@ -170,6 +187,19 @@
         <arg name="height" type="uint" summary="height"/>
       </event>
 
+      <request name="request_window_effect" since="2">
+        <description summary="custom window effect">
+          custom window effect.
+        </description>
+        <arg name="effectscene" type="uint"/>
+      </request>
+
+      <request name="request_window_startup_effect" since="2">
+        <description summary="custom window start up effect">
+          custom window start up effect.
+        </description>
+        <arg name="effecttype" type="uint"/>
+      </request>
 
     </interface>
 
