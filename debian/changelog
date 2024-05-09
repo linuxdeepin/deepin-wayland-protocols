@@ -1,3 +1,10 @@
+plasma-wayland-protocols (1.10.0.27.1-deepin17-1) unstable; urgency=medium
+
+  [dingzhixuan]
+  * fix: add dde kvm protocols.
+
+ -- dingzhixuan <dingzhixuan@uniontech.com>  Thu, 09 May 2024 15:00:26 +0800
+
 plasma-wayland-protocols (1.10.0.16-deepin16-1) unstable; urgency=medium
 
   [ zhangyu ]
