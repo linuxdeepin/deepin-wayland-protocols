@@ -1,4 +1,4 @@
-plasma-wayland-protocols (1.10.0.27.1-deepin17-1) unstable; urgency=medium
+plasma-wayland-protocols (1.10.0.28-deepin28-1) unstable; urgency=medium
 
   [dingzhixuan]
   * fix: add dde kvm protocols.
