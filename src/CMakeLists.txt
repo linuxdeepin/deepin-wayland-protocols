@@ -40,8 +40,8 @@ install(FILES
     protocols/kde-output-order-v1.xml
     protocols/dde-kvm.xml
 
-    DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
+    DESTINATION ${KDE_INSTALL_DATADIR}/deepin-wayland-protocols)
 
 # Backward compatibility for previously used non-standard protocol file names
 # TODO KF6 remove
-install(FILES protocols/zkde-screencast-unstable-v1.xml RENAME screencast.xml DESTINATION ${KDE_INSTALL_DATADIR}/plasma-wayland-protocols)
+install(FILES protocols/zkde-screencast-unstable-v1.xml RENAME screencast.xml DESTINATION ${KDE_INSTALL_DATADIR}/deepin-wayland-protocols)

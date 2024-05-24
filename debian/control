@@ -1,4 +1,4 @@
-Source: plasma-wayland-protocols
+Source: deepin-wayland-protocols
 Section: libdevel
 Priority: optional
 Maintainer: Debian Qt/KDE Maintainers <debian-qt-kde@lists.debian.org>
@@ -10,13 +10,13 @@ Build-Depends: cmake (>= 3.5~),
                qtbase5-dev,
 Standards-Version: 4.6.2
 Rules-Requires-Root: no
-Homepage: https://invent.kde.org/libraries/plasma-wayland-protocols
-Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/plasma-wayland-protocols
-Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/plasma-wayland-protocols.git
+Homepage: https://invent.kde.org/libraries/deepin-wayland-protocols
+Vcs-Browser: https://salsa.debian.org/qt-kde-team/kde/deepin-wayland-protocols
+Vcs-Git: https://salsa.debian.org/qt-kde-team/kde/deepin-wayland-protocols.git
 
-Package: plasma-wayland-protocols
+Package: deepin-wayland-protocols
 Architecture: any
 Depends: ${misc:Depends}
-Description: Wayland protocols for Plasma
+Description: Wayland protocols for deepin
  This package contains protocols for Wayland that are not standard, and used
- in KDE Plasma.
+ in KDE deepin.

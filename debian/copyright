@@ -1,6 +1,6 @@
 Format: https://www.debian.org/doc/packaging-manuals/copyright-format/1.0/
-Upstream-Name: plasma-wayland-protocols
-Source: https://invent.kde.org/libraries/plasma-wayland-protocols
+Upstream-Name: deepin-wayland-protocols
+Source: https://invent.kde.org/libraries/deepin-wayland-protocols
 
 Files: *
 Copyright: 2019-2021, Aleix Pol Gonzalez <aleixpol@kde.org>
