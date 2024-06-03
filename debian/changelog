@@ -1,3 +1,10 @@
+deepin-wayland-protocols (1.10.0.28-deepin28-1) unstable; urgency=medium
+
+  [dingzhixuan]
+  * fix: add dde kvm protocols.
+
+ -- dingzhixuan <dingzhixuan@uniontech.com>  Thu, 09 May 2024 15:00:26 +0800
+
 deepin-wayland-protocols (1.6.0-deepin.1.2) unstable; urgency=medium
 
   * Bug fix.
