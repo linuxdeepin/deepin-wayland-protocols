@@ -1,12 +1,31 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <protocol name="dde_shell">
   <copyright><![CDATA[
-    SPDX-FileCopyrightText: 2018 - 2023 UnionTech Software Technology Co., Ltd.
+        Copyright © 2020  wugang <wugang@uniontech.com>
 
-    SPDX-License-Identifier: LGPL-2.1-or-later
-  ]]></copyright>
+        Permission to use, copy, modify, distribute, and sell this
+        software and its documentation for any purpose is hereby granted
+        without fee, provided that the above copyright notice appear in
+        all copies and that both that copyright notice and this permission
+        notice appear in supporting documentation, and that the name of
+        the copyright holders not be used in advertising or publicity
+        pertaining to distribution of the software without specific,
+        written prior permission.  The copyright holders make no
+        representations about the suitability of this software for any
+        purpose.  It is provided "as is" without express or implied
+        warranty.
 
-    <interface name="dde_shell" version="1">
+        THE COPYRIGHT HOLDERS DISCLAIM ALL WARRANTIES WITH REGARD TO THIS
+        SOFTWARE, INCLUDING ALL IMPLIED WARRANTIES OF MERCHANTABILITY AND
+        FITNESS, IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY
+        SPECIAL, INDIRECT OR CONSEQUENTIAL DAMAGES OR ANY DAMAGES
+        WHATSOEVER RESULTING FROM LOSS OF USE, DATA OR PROFITS, WHETHER IN
+        AN ACTION OF CONTRACT, NEGLIGENCE OR OTHER TORTIOUS ACTION,
+        ARISING OUT OF OR IN CONNECTION WITH THE USE OR PERFORMANCE OF
+        THIS SOFTWARE.
+        ]]></copyright>
+
+    <interface name="dde_shell" version="2">
 
       <description summary="get window info">
         Eg: window position.
@@ -34,9 +53,6 @@
         <entry name="skipswitcher" value="1 &lt;&lt; 18"/>
         <entry name="accept_focus" value="1 &lt;&lt; 19"/>
         <entry name="modality" value="1 &lt;&lt; 20"/>
-        <entry name="two_split" value="1 &lt;&lt; 21"/>
-        <entry name="four_split" value="1 &lt;&lt; 22"/>
-        <entry name="no_split" value="1 &lt;&lt; 23"/>
       </enum>
 
       <enum name="property">
@@ -50,7 +66,28 @@
         <entry name="ShadowColor" value="1 &lt;&lt; 7"/>
         <entry name="MouseInputAreaMargins" value="1 &lt;&lt; 8"/>
         <entry name="WindowPixelRatio" value="1 &lt;&lt; 9"/>
-        <entry name="QuickTile" value="1 &lt;&lt; 10"/>
+      </enum>
+
+      <enum name="split_type">
+        <entry name="left_split" value="1 &lt;&lt; 0"/>
+        <entry name="right_split" value="1 &lt;&lt; 1"/>
+      </enum>
+
+      <enum name="effectscene">
+        <entry name="effectNoRadius" value="1 &lt;&lt; 0"/>
+        <entry name="effectNoShadow" value="1 &lt;&lt; 1"/>
+        <entry name="effectNoBorder" value="1 &lt;&lt; 2"/>
+        <entry name="effectNoStart" value="1 &lt;&lt; 4"/>
+        <entry name="effectNoClose" value="1 &lt;&lt; 5"/>
+        <entry name="effectNoMaximize" value="1 &lt;&lt; 6"/>
+        <entry name="effectNoMinimize" value="1 &lt;&lt; 7"/>
+      </enum>
+
+      <enum name="effecttype">
+        <entry name="effectNormal" value="1 &lt;&lt; 0"/>
+        <entry name="effectCursor" value="1 &lt;&lt; 1"/>
+        <entry name="effectTop" value="1 &lt;&lt; 2"/>
+        <entry name="effectBottom" value="1 &lt;&lt; 3"/>
       </enum>
 
       <request name="get_shell_surface">
@@ -63,7 +100,7 @@
 
     </interface>
 
-    <interface name="dde_shell_surface" version="1">
+    <interface name="dde_shell_surface" version="2">
 
       <description summary="dde shell surface">
 
@@ -113,7 +150,14 @@
         <arg name="flags" type="uint" summary="bitfield of state flags"/>
       </event>
 
-      <request name="set_property">
+      <event name="splitable">
+        <description summary="window splitable">
+          This event will be sent as soon as the window splitable.
+        </description>
+        <arg name="flags" type="uint" summary="splitable value"/>
+      </event>
+
+      <request name="set_property" since="2">
         <description summary="set window property">
           Set window property.
 
@@ -123,6 +167,38 @@
         </description>
         <arg name="property" type="uint" enum="property" summary="property type"/>
         <arg name="dataArr" type="array" summary="property value"/>
+      </request>
+
+      <request name="request_split_window">
+        <description summary="request split window">
+          Request split window.
+        </description>
+        <arg name="split_type" type="uint"/>
+      </request>
+
+      <event name="workarea" since="2">
+        <description summary="work area">
+            This event will send work area
+        </description>
+        <arg name="output" type="object" interface="wl_output" summary="output"/>
+        <arg name="x" type="uint" summary="x"/>
+        <arg name="y" type="uint" summary="y"/>
+        <arg name="width" type="uint" summary="width"/>
+        <arg name="height" type="uint" summary="height"/>
+      </event>
+
+      <request name="request_window_effect" since="2">
+        <description summary="custom window effect">
+          custom window effect.
+        </description>
+        <arg name="effectscene" type="uint"/>
+      </request>
+
+      <request name="request_window_startup_effect" since="2">
+        <description summary="custom window start up effect">
+          custom window start up effect.
+        </description>
+        <arg name="effecttype" type="uint"/>
       </request>
 
     </interface>

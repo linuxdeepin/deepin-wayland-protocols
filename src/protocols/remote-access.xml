@@ -40,6 +40,7 @@
             <arg name="height" type="uint"/>
             <arg name="stride" type="uint"/>
             <arg name="format" type="uint"/>
+            <arg name="frame" type="int"/>
         </event>
         <request name="release" type="destructor" since="1">
           <description summary="This request comes once client no longer needs this buffer."/>

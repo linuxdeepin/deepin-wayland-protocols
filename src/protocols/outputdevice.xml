@@ -313,6 +313,45 @@
         <arg name="vrr_policy" type="uint" enum="vrr_policy"/>
     </event>
 
+    <event name="brightness" since="4">
+        <description summary="outputdevice brightness">
+            The brigh of this outputdevice.
+        </description>
+        <arg name="brightness" type="int" summary="aspired brightness's number"/>
+    </event>
+
+    <event name="ctm" since="4">
+        <description summary="screen color temperature">
+            Update CTM.
+        </description>
+        <arg name="red" type="int" summary="red component"/>
+        <arg name="green" type="int" summary="green component"/>
+        <arg name="blue" type="int" summary="blue component"/>
+    </event>
+
+    <enum name="rgb_range">
+      <description summary="describes RGB range policy">
+        Whether full or limited color range should be used
+      </description>
+      <entry name="automatic" value="0"/>
+      <entry name="full" value="1"/>
+      <entry name="limited" value="2"/>
+    </enum>
+
+    <event name="rgb_range">
+      <description summary="RGB range">
+        What rgb range the compositor is using for this output
+      </description>
+      <arg name="rgb_range" type="uint" enum="rgb_range"/>
+    </event>
+
+    <event name="name" since="4">
+      <description summary="Output's name">
+        Name of the output, it's useful to cross-reference to an zxdg_output_v1 and ultimately QScreen
+      </description>
+      <arg name="name" type="string"/>
+    </event>
+
 </interface>
 
 

@@ -10,7 +10,7 @@
     SPDX-License-Identifier: MIT-CMU
     ]]></copyright>
 
-<interface name="kde_output_management_v2" version="2">
+<interface name="kde_output_management_v2" version="3">
   <description summary="configuration of server outputs through clients">
     This interface enables clients to set properties of output devices for screen
     configuration purposes via the server. To this end output devices are referenced
@@ -62,7 +62,7 @@
 
 </interface>
 
-<interface name="kde_output_configuration_v2" version="2">
+<interface name="kde_output_configuration_v2" version="3">
   <description summary="configure single output devices">
     outputconfiguration is a client-specific resource that can be used to ask
     the server to apply changes to available output devices.
@@ -77,6 +77,13 @@
     or failed to apply. outputdevice objects are updated after the changes have been
     applied to the hardware and before the server side sends the applied event.
   </description>
+
+  <enum name="error">
+    <description summary="kde_output_configuration_v2 error values">
+      These error can be emitted in response to kde_output_configuration_v2 requests.
+    </description>
+    <entry name="already_applied" value="0" summary="the config is already applied"/>
+  </enum>
 
   <request name="enable">
     <description summary="enable or disable an output">
@@ -129,6 +136,9 @@
     <description summary="apply configuration changes to all output devices">
       Asks the server to apply property changes requested through this outputconfiguration
       object to all outputs on the server side.
+
+      The output configuration can be applied only once. The already_applied protocol error
+      will be posted if the apply request is called the second time.
     </description>
   </request>
 
@@ -197,6 +207,16 @@
     <arg name="output" type="object" interface="kde_output_device_v2" allow-null="false"/>
   </request>
 
+  <request name="set_priority" since="3">
+    <description summary="Set the order of outputs">
+      The order of outputs can be used to assign desktop environment components to a specific screen,
+      see kde_output_order_v1 for details. The priority is 1-based for outputs that will be enabled after
+      this changeset is applied, all outputs that are disabled need to have the index set to zero.
+    </description>
+    <arg name="outputdevice" type="object" interface="kde_output_device_v2" summary="outputdevice the index applies to" />
+    <arg name="priority" type="uint" summary="the priority of the output" />
+  </request>
+
   <request name="brightness">
     <description summary="switch outputdevice brightness">
       Sets the just a test.
@@ -204,6 +224,15 @@
     <arg name="outputdevice" type="object" interface="kde_output_device_v2" summary="outputdevice this brightness change applies to"/>
     <arg name="brightness" type="int" summary="aspired brightness's number"/>
   </request>
-</interface>
 
+  <request name="ctm">
+    <description summary="set screen color temperature">
+      Set CTM.
+    </description>
+    <arg name="outputdevice" type="object" interface="kde_output_device_v2" summary="outputdevice ctm apply to"/>
+    <arg name="red" type="int" summary="red component"/>
+    <arg name="green" type="int" summary="green component"/>
+    <arg name="blue" type="int" summary="blue component"/>
+  </request>
+</interface>
 </protocol>
