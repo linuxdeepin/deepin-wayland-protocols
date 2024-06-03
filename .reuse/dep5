@@ -20,6 +20,6 @@ Copyright: UnionTech Software Technology Co., Ltd.
 License: CC-BY-4.0
 
 # Project file
-Files: CMakeLists.txt .gitignore src/CMakeLists.txt DeepinWaylandProtocolsConfig.cmake.in
+Files: CMakeLists.txt .gitignore src/CMakeLists.txt DeepinWaylandProtocolsConfig.cmake.in src/protocols/*.xml
 Copyright: None
 License: CC0-1.0

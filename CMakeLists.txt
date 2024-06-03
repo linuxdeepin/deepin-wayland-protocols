@@ -1,6 +1,10 @@
+# SPDX-FileCopyrightText: 2020 Aleix Pol Gonzalez <aleixpol@kde.org>
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
 cmake_minimum_required(VERSION 3.5)
 
-project(DeepinWaylandProtocols VERSION 1.6.0)
+project(DeepinWaylandProtocols VERSION 1.10.0)
 
 include(FeatureSummary)
 include(CMakePackageConfigHelpers)
