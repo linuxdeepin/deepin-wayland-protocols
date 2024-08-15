@@ -1,5 +1,11 @@
 <protocol name="fullscreen_shell">
   <interface name="_wl_fullscreen_shell" version="1">
+	<copyright><![CDATA[
+    SPDX-FileCopyrightText: 2018 - 2023 UnionTech Software Technology Co., Ltd.
+
+    SPDX-License-Identifier: LGPL-2.1-or-later
+  ]]></copyright>
+
     <description summary="Displays a single surface per output">
       Displays a single surface per output.
 
