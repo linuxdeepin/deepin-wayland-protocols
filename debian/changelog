@@ -1,3 +1,10 @@
+deepin-wayland-protocols (1.10.0.30) unstable; urgency=medium
+
+  * fix: outputdevice.xml broken abi
+  * feat: add color mode switching
+
+ -- rewine <luhongxu@deepin.org>  Tue, 06 May 2025 17:01:13 +0800
+
 deepin-wayland-protocols (1.10.0.28-deepin28-1) unstable; urgency=medium
 
   [dingzhixuan]
