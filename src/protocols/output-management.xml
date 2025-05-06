@@ -215,6 +215,25 @@
         <arg name="blue" type="int" summary="blue component"/>
     </request>
 
+    <enum name="color_mode">
+        <description summary="describes color mode">
+            Supported color mode.
+        </description>
+        <entry name="native" value="0"/>
+        <entry name="photo" value="1"/>
+        <entry name="adobe" value="2"/>
+        <entry name="web" value="3"/>
+        <entry name="ebook" value="4"/>
+    </enum>
+
+    <request name="set_color_mode">
+        <description summary="set screen color mode">
+            Set ColorMode.
+        </description>
+        <arg name="outputdevice" type="object" interface="org_kde_kwin_outputdevice" summary="outputdevice color mode apply to"/>
+        <arg name="color_mode" type="uint" enum="color_mode"/>
+    </request>
+
 </interface>
 
 </protocol>

@@ -352,8 +352,22 @@
       <arg name="name" type="string"/>
     </event>
 
+    <enum name="color_mode">
+        <description summary="describes color mode">
+            Supported color mode.
+        </description>
+        <entry name="native" value="0"/>
+        <entry name="photo" value="1"/>
+        <entry name="adobe" value="2"/>
+        <entry name="web" value="3"/>
+        <entry name="ebook" value="4"/>
+    </enum>
+
+    <event name="color_mode" since="4">
+        <description summary="screen color mode">
+            Update color mode.
+        </description>
+        <arg name="color_mode" type="uint" enum="color_mode"/>
+    </event>
 </interface>
-
-
-
 </protocol>
