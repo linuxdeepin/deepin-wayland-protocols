@@ -1,3 +1,9 @@
+deepin-wayland-protocols (1.10.0.31) unstable; urgency=medium
+
+  * fix: wrong protocol version.
+
+ -- rewine <luhongxu@deepin.org>  Tue, 03 Jun 2025 10:49:34 +0800
+
 deepin-wayland-protocols (1.10.0.30) unstable; urgency=medium
 
   * fix: outputdevice.xml broken abi
