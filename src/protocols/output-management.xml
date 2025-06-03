@@ -9,7 +9,7 @@
         SPDX-License-Identifier: MIT-CMU
         ]]></copyright>
 
-<interface name="org_kde_kwin_outputmanagement" version="4">
+<interface name="org_kde_kwin_outputmanagement" version="5">
     <description summary="configuration of server outputs through clients">
     This interface enables clients to set properties of output devices for screen
     configuration purposes via the server. To this end output devices are referenced
