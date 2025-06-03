@@ -10,7 +10,7 @@
         ]]></copyright>
 
 
-<interface name="org_kde_kwin_outputdevice" version="4">
+<interface name="org_kde_kwin_outputdevice" version="5">
     <description summary="output configuration representation">
         An outputdevice describes a display device available to the compositor.
         outputdevice is similar to wl_output, but focuses on output
