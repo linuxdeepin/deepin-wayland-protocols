@@ -61,7 +61,7 @@
 
 </interface>
 
-<interface name="org_kde_kwin_outputconfiguration" version="4">
+<interface name="org_kde_kwin_outputconfiguration" version="5">
     <description summary="configure single output devices">
         outputconfiguration is a client-specific resource that can be used to ask
         the server to apply changes to available output devices.
@@ -232,6 +232,13 @@
         </description>
         <arg name="outputdevice" type="object" interface="org_kde_kwin_outputdevice" summary="outputdevice color mode apply to"/>
         <arg name="color_mode" type="uint" enum="color_mode"/>
+    </request>
+
+    <request name="set_primary_output" since="5">
+        <description summary="designate the primary output">
+            Specifies the primary output.
+        </description>
+        <arg name="output" type="object" interface="org_kde_kwin_outputdevice" allow-null="false" summary="the output to set as primary"/>
     </request>
 
 </interface>
