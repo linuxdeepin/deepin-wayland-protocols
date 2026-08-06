@@ -1,3 +1,11 @@
+deepin-wayland-protocols (1.10.0.32) unstable; urgency=medium
+
+  * feat(protocol): add set_primary_output to outputmanagement-v1
+  * chore(debian): update version to 1.10.0.31
+  * fix: wrong protocol version
+
+ -- justforlxz <justforlxz@gmail.com>  Thu, 06 Aug 2026 17:41:47 +0800
+
 deepin-wayland-protocols (1.10.0.31) unstable; urgency=medium
 
   * fix: wrong protocol version.
