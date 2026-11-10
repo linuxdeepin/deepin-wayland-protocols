@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<protocol name="dde_xwayland_coordinate_v1">
+  <copyright>
+    SPDX-FileCopyrightText: 2026 UnionTech Software Technology Co., Ltd.
+    SPDX-License-Identifier: MIT
+  </copyright>
+  <interface name="dde_xwayland_coordinate_manager_v1" version="1">
+    <description summary="map owned surfaces into the local Xwayland root">
+      Experimental interoperability protocol, not a wayland-protocols standard.
+      This protocol maps surface-local rectangles to the compositor's local
+      Xwayland root coordinate space. It does not expose toolkit DPI, physical
+      output pixels, input method state, or other clients' surfaces.
+    </description>
+    <request name="destroy" type="destructor"/>
+    <request name="get_mapping">
+      <arg name="id" type="new_id" interface="dde_xwayland_coordinate_v1"/>
+      <arg name="surface" type="object" interface="wl_surface"/>
+    </request>
+  </interface>
+  <interface name="dde_xwayland_coordinate_v1" version="1">
+    <description summary="a live surface-local to X root mapping">
+      The object tracks a rectangle on one surface. Coordinates supplied by the
+      client are surface-local, after toolkit-to-surface conversion, not buffer
+      pixels. Neither buffer_scale nor the preferred fractional rendering scale
+      is to be applied by the client.
+
+      Replies are asynchronous. A new rectangle supersedes the previous one.
+      The compositor also republishes the last rectangle when the surface moves
+      or the Xwayland mapping changes. Clients must discard results for obsolete
+      serials and destroy the object when its input context loses focus.
+
+      The compositor supplies the local X display name and root XID in every
+      mapped event. Results may only be used with that X server. A new generation
+      is emitted for each result; clients must not combine fields from different
+      results. When the surface is unmapped, destroyed, or Xwayland is unavailable,
+      unavailable invalidates the last result. The object survives unmapping but
+      cannot be rebound to a different wl_surface.
+
+      After unavailable the compositor resumes mapped events when the mapping
+      becomes available again, without requiring another set_rectangle request.
+      Results are coordinate conversions, not popup placement decisions: they
+      are not clipped to the surface or to output boundaries. Zero-width or
+      zero-height rectangles are valid. Each component is rounded to the nearest
+      native integer pixel, with half-way values rounded away from zero.
+    </description>
+    <enum name="error">
+      <entry name="invalid_rectangle" value="0" summary="negative rectangle size"/>
+    </enum>
+    <request name="destroy" type="destructor"/>
+    <request name="set_rectangle">
+      <arg name="serial" type="uint"/>
+      <arg name="x" type="fixed"/>
+      <arg name="y" type="fixed"/>
+      <arg name="width" type="fixed"/>
+      <arg name="height" type="fixed"/>
+    </request>
+    <event name="mapped">
+      <arg name="serial" type="uint"/>
+      <arg name="generation" type="uint"/>
+      <arg name="display_name" type="string"/>
+      <arg name="root" type="uint"/>
+      <arg name="x" type="int"/>
+      <arg name="y" type="int"/>
+      <arg name="width" type="int"/>
+      <arg name="height" type="int"/>
+    </event>
+    <event name="unavailable">
+      <arg name="serial" type="uint"/>
+      <arg name="generation" type="uint"/>
+    </event>
+  </interface>
+</protocol>

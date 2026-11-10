@@ -1,3 +1,9 @@
+deepin-wayland-protocols (1.10.0.33) unstable; urgency=medium
+
+  * feat(protocol): add dde_xwayland_coordinate_v1
+
+ -- Yixue Wang <wangyixue@uniontech.com>  Tue, 10 Nov 2026 16:30:00 +0800
+
 deepin-wayland-protocols (1.10.0.32) unstable; urgency=medium
 
   * feat(protocol): add set_primary_output to outputmanagement-v1
