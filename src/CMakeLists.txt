@@ -12,6 +12,7 @@ install(FILES
     protocols/dde-seat.xml
     protocols/dde-security.xml
     protocols/dde-shell.xml
+    protocols/dde-xwayland-coordinate-v1.xml
     protocols/fake-input.xml
     protocols/fullscreen-shell.xml
     protocols/idle.xml
